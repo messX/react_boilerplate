@@ -42,6 +42,8 @@ const config = {
       "About":path.resolve(__dirname, 'app/components/about.jsx'),
       "Main":path.resolve(__dirname, 'app/components/main.jsx'),
       "Nav":path.resolve(__dirname, 'app/components/nav.jsx'),
+      "WeatherMsg":path.resolve(__dirname, 'app/components/weatherRes.jsx'),
+      "WeatherAPI":path.resolve(__dirname, 'app/api/openWeatherMap.jsx'),
     }
   },
   // plugins: [
