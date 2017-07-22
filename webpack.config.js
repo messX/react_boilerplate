@@ -37,6 +37,11 @@ const config = {
     extensions: [".js", ".json", ".jsx", ".css"],
     alias:{
       //"module": path.resolve(__dirname, "app/third/module.js"),
+      "WeatherForm":path.resolve(__dirname, 'app/components/weatherForm.jsx'),
+      "Weather":path.resolve(__dirname, 'app/components/weather.jsx'),
+      "About":path.resolve(__dirname, 'app/components/about.jsx'),
+      "Main":path.resolve(__dirname, 'app/components/main.jsx'),
+      "Nav":path.resolve(__dirname, 'app/components/nav.jsx'),
     }
   },
   // plugins: [
@@ -44,3 +49,4 @@ const config = {
   //   new HtmlWebpackPlugin({template: './src/index.html'})
   // ]
 };
+module.exports = config;
