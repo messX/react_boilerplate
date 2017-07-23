@@ -1,15 +1,9 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var {BrowserRouter} = require('react-router-dom');
-var Nav = require('Nav')
-var Main = require('Main')
+var TodoApp = require('TodoApp')
 
 ReactDOM.render(
-  <BrowserRouter>
-    <div>
-      <Nav/>
-      <Main/>
-    </div>
-  </BrowserRouter>,
+  <TodoApp/>,
   document.getElementById('app')
 );
