@@ -56,6 +56,7 @@ const config = {
       "AddTodo":path.resolve(__dirname, 'app/components/addTodo.jsx'),
       "Todo":path.resolve(__dirname, 'app/components/todo.jsx'),
       "TodoList":path.resolve(__dirname, 'app/components/todoList.jsx'),
+      "FilterTodo":path.resolve(__dirname, 'app/components/filterTodo.jsx'),
     }
   },
   plugins: [
