@@ -1,34 +1,27 @@
 var React = require('react')
 var Todo = require('Todo')
+var actions = require('actions')
+import { connect } from 'react-redux'
 
-var TodoList = React.createClass({
-  callHandleToggle: function(id){
-    console.log("call handle todo for", this.props);
-    this.props.onToggle(id)
-  },
-  render:function(){
-    var todos = this.props.todos;
-    var callToggle = this.callHandleToggle;
-    //console.log("todos", todos)
-    var renderTodos = function() {
-      if(todos.length == 0)
-      {
-        return (
-          <p>Nothing to do.</p>
-        )
-      }
-      else{
-        return todos.map((todo) =>
-            <Todo key={todo.id} {...todo} onToggle={callToggle}/>
-        )
-      }
-    }
+var renderTodos = function(todos, onTodoClick) {
+  console.log("main", todos)
+  if(todos.length == 0)
+  {
     return (
-      <div>
-        {renderTodos()}
-      </div>
+      <p>Nothing to do.</p>
     )
   }
-});
+  else{
+    return todos.map((todo) =>
+        <Todo key={todo.id} {...todo} handleTodoClick={onTodoClick}/>
+    )
+  }
+}
+
+var TodoList = ({todos, onTodoClick})=> (
+      <div>
+        {renderTodos(todos, onTodoClick)}
+      </div>
+)
 
 module.exports = TodoList;

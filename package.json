@@ -20,8 +20,11 @@
     "node-sass": "^4.5.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.6",
     "react-router": "^4.1.1",
-    "sass-loader": "^6.0.6"
+    "redux": "^3.7.2",
+    "sass-loader": "^6.0.6",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-preset-react": "^6.24.1",

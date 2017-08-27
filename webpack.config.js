@@ -57,12 +57,22 @@ const config = {
       "Todo":path.resolve(__dirname, 'app/components/todo.jsx'),
       "TodoList":path.resolve(__dirname, 'app/components/todoList.jsx'),
       "FilterTodo":path.resolve(__dirname, 'app/components/filterTodo.jsx'),
+      "actions":path.resolve(__dirname, 'app/actions/action.jsx'),
+      "MainReducer": path.resolve(__dirname, 'app/reducers/reducer.jsx'),
+      "Store": path.resolve(__dirname, 'app/store/store.jsx'),
+      "AddTodoContainer": path.resolve(__dirname, 'app/container/addTodoContainer.jsx'),
+      "ToggleTodoContainer": path.resolve(__dirname, 'app/container/filterTodoContainer.jsx'),
+      "TodoContainer": path.resolve(__dirname, 'app/container/todoContainer.jsx'),
     }
   },
   plugins: [
     new webpack.ProvidePlugin({
+
       '$': "jquery",
       "jQuery": "jquery"
+    }),
+    new webpack.ProvidePlugin({
+      underscore: "underscore"
     }),
     extractSCSS,
     // new webpack.optimize.UglifyJsPlugin(),
